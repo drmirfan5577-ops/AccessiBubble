@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>AccessiBubble – Floating Tools</title>
+    <meta name="description" content="A floating bubble accessibility toolkit with password vault, clipboard manager, code snippets, and split-screen for Android-compatible mobile use." />
+    <meta name="keywords" content="floating bubble, accessibility, password manager, clipboard, split screen, android tools" />
+    <meta name="author" content="OnSpace" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AccessiBubble – Floating Tools" />
+    <meta property="og:description" content="Floating bubble accessibility toolkit for mobile" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AccessiBubble – Floating Tools" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#8b5cf6" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
